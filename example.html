@@ -6,12 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GitHub Profile Badge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg-color: #101010;
+            --secondary-color: #FF6C00;
+            --secondary-color-dark: #b94f03;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        body {
+            color: white;
+            font-family: "Open Sans", sans-serif;
+            background-color: #121212;
+            margin: 10px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin: 10px;
+        }
+
+        /* unvisited link */
+        a:link {
+            color: var(--secondary-color-dark);
+        }
+
+        /* visited link */
+        a:visited {
+            color: var(--secondary-color-dark);
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .example-badge {
+            padding: 10px;
+            border: 1px white solid;
+        }
+
+        .example-badge p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 10px;
+            font-size: small;
+        }
+    </style>
 </head>
 
-<body style="background-color: #121212;">
-    <div>
-        <div class="github-profile-badge" data-user="rapsssito"></div>
-    </div>
+<body>
+    <main>
+        <h1>GitHub profile badge examples</h1>
+        <div class="example-badge">
+            <p>Default badge:</p>
+            <div class="github-profile-badge" data-user="rapsssito"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Check out the documentation <a href="https://github.com/Rapsssito/github-profile-badge"
+                target="_blank">here</a>.</p>
+    </footer>
 </body>
 
 <script src="https://cdn.jsdelivr.net/gh/Rapsssito/github-profile-badge@latest/src/widget.min.js"></script>
