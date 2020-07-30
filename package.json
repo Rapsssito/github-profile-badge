@@ -1,0 +1,27 @@
+{
+  "name": "github-profile-badge",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rapsssito/github-profile-badge.git"
+  },
+  "keywords": [
+    "github"
+  ],
+  "author": "Rapsssito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rapsssito/github-profile-badge/issues"
+  },
+  "homepage": "https://github.com/Rapsssito/github-profile-badge#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.0.7",
+    "semantic-release": "^17.1.1"
+  }
+}
