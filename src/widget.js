@@ -82,7 +82,7 @@
         widget.appendChild(wrapper);
     }
 
-    const widgets = d.getElementsByClassName('github-mini-widget');
+    const widgets = d.getElementsByClassName('github-profile-badge');
     for (let i = 0; i < widgets.length; i++) {
         fillWidget(widgets[i]);
     }

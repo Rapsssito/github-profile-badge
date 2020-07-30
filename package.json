@@ -10,10 +10,15 @@
     "url": "git+https://github.com/Rapsssito/github-profile-badge.git"
   },
   "keywords": [
-    "github"
+    "github",
+    "profile",
+    "badge",
+    "widget",
+    "js",
+    "html"
   ],
   "author": "Rapsssito",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Rapsssito/github-profile-badge/issues"
   },
