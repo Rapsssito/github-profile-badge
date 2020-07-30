@@ -2,7 +2,7 @@
 
 A widget to display your GitHub profile embedded in any website. This widget retrieves data from your GitHub profile and shows it up directly on your website. It is written in pure JavaScript and does not rely on external fonts or dependencies.
 
-**Check out the [live example](https://rapsssito.github.io/github-profile-badge/)**.
+**Check out the [live example](https://rapsssito.github.io/github-profile-badge/example.html)**.
 
 ## Usage
 
