@@ -35,6 +35,11 @@
             margin: 10px;
         }
 
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+        }
+
         /* unvisited link */
         a:link {
             color: var(--secondary-color-dark);
@@ -55,7 +60,7 @@
             border: 1px white solid;
         }
 
-        .example-badge p {
+        .example-badge h3 {
             margin-bottom: 10px;
         }
 
@@ -70,12 +75,26 @@
     <main>
         <h1>GitHub profile badge examples</h1>
         <div class="example-badge">
-            <p>Default badge:</p>
+            <h3>Default:</h3>
             <div class="github-profile-badge" data-user="rapsssito"></div>
+        </div>
+        <div class="example-badge">
+            <h3>Custom background:</h3>
+            <style>
+                .custom-background .github-profile-badge-name-wrapper {
+                    background: gray;
+                }
+
+                .custom-background .github-profile-badge-name {
+                    color: black;
+                    font-weight: bold;
+                }
+            </style>
+            <div class="github-profile-badge custom-background" data-user="rapsssito"></div>
         </div>
     </main>
     <footer>
-        <p>Check out the documentation <a href="https://github.com/Rapsssito/github-profile-badge"
+        <p>You can check out the documentation <a href="https://github.com/Rapsssito/github-profile-badge"
                 target="_blank">here</a>.</p>
     </footer>
 </body>

@@ -11,6 +11,7 @@
 
         .github-profile-badge-img-wrapper {
             position: relative;
+            height: ${BASE_SIZE}px;
         }
 
         .github-profile-badge-img {
@@ -29,7 +30,14 @@
 
         .github-profile-badge-name-wrapper {
             display: flex;
+            align-items: center;
             overflow: hidden;
+            background: transparent;
+            align-self: stretch;
+            padding-left: ${BASE_SIZE/2}px;
+            margin-left: -${BASE_SIZE/2}px;
+            border-top-right-radius: ${BASE_SIZE/2}px;
+            border-bottom-right-radius: ${BASE_SIZE/2}px;
             width: 0;
             transition: width 0.5s ease;
         }
@@ -41,7 +49,7 @@
             margin: 0;
             padding: 0;
             margin-left: 5px;
-            margin-right: 5px;
+            margin-right: 10px;
         }
     `;
     d.head.appendChild(style);
