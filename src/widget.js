@@ -1,6 +1,51 @@
 (function (d) {
     const BASE_SIZE = 50;
 
+    const style = d.createElement('style');
+    style.innerHTML = `
+        .github-profile-badge-wrapper {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .github-profile-badge-img-wrapper {
+            position: relative;
+        }
+
+        .github-profile-badge-img {
+            border-radius: 50%;
+            width: ${BASE_SIZE}px;
+            height: ${BASE_SIZE}px;
+        }
+
+        .github-profile-badge-logo {
+            position: absolute;
+            bottom: -5px;
+            left: 35px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .github-profile-badge-name-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: 0;
+            transition: width 0.5s ease;
+        }
+
+        .github-profile-badge-name {
+            font-size: 15px;
+            font-family: monospace;
+            color: white;
+            margin: 0;
+            padding: 0;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    `;
+    d.head.appendChild(style);
+
     /**
      * @param {string} username
      */
@@ -8,7 +53,7 @@
         const wrapper = d.createElement('a');
         wrapper.href = `https://github.com/${username}`;
         wrapper.target = '_blank';
-        wrapper.style.cssText = 'text-decoration: none; display: flex; align-items: center;';
+        wrapper.className = 'github-profile-badge-wrapper';
         return wrapper;
     }
 
@@ -19,7 +64,7 @@
         const profileImg = d.createElement('img');
         profileImg.src = `https://avatars.githubusercontent.com/${username}`;
         profileImg.alt = `${username} GitHub Profile`;
-        profileImg.style.cssText = `border-radius: 50%; width: ${BASE_SIZE}px; height: ${BASE_SIZE}px;`;
+        profileImg.className = 'github-profile-badge-img';
         return profileImg;
     }
 
@@ -27,7 +72,7 @@
         const logoImg = d.createElement('img');
         logoImg.src = 'https://github.com/fluidicon.png';
         logoImg.alt = 'GitHub logo';
-        logoImg.style.cssText = 'position: absolute; bottom: -5px; left: 35px; width: 20px; height: 20px;';
+        logoImg.className = 'github-profile-badge-logo';
         return logoImg;
     }
 
@@ -36,7 +81,7 @@
      */
     function getImagesDiv(username) {
         const parentDiv = d.createElement('div');
-        parentDiv.style.cssText = 'position: relative;';
+        parentDiv.className = 'github-profile-badge-img-wrapper';
         parentDiv.appendChild(getProfile(username));
         parentDiv.appendChild(getGitHubLogo());
         return parentDiv;
@@ -47,8 +92,7 @@
      */
     function getNameText(username) {
         const nameText = d.createElement('p');
-        nameText.style.cssText =
-            'font-size: 15px; font-family: monospace; color: white; margin-left: 5px; margin-right: 5px;';
+        nameText.className = 'github-profile-badge-name';
         nameText.innerText = '\\' + username;
         return nameText;
     }
@@ -63,7 +107,7 @@
         wrapper.appendChild(getImagesDiv(username));
 
         const nameDiv = d.createElement('div');
-        nameDiv.style.cssText = 'display: flex; overflow: hidden; width: 0; transition: width 0.5s ease;';
+        nameDiv.className = 'github-profile-badge-name-wrapper';
         const nameText = getNameText(username);
         nameDiv.appendChild(nameText);
         wrapper.appendChild(nameDiv);

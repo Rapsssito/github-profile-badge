@@ -15,6 +15,22 @@ You can include the `widget.js` script and it will create the widget for you:
 
 ### Attributes
 
-| Attribute       | Type       | Description                                      |
-| --------------- | ---------- | ------------------------------------------------ |
-| **`data-user`** | `<string>` | **Required**. GitHub username.                   |
+| Attribute       | Type       | Description                    |
+| --------------- | ---------- | ------------------------------ |
+| **`data-user`** | `<string>` | **Required**. GitHub username. |
+
+## Customization
+
+The widget is customizable via pure CSS (you might need to use `!important` on some attributes depending on your setup). Here is the list of classes used inside the widget:
+
+-   `github-profile-badge`: `<div>` main container.
+-   `github-profile-badge-wrapper`: `<a>` links to the GitHub account and acts as a global container.
+    -   `github-profile-badge-img-wrapper`: `<div>` wraps all the images (account and GitHub logo).
+        -   `github-profile-badge-img`: `<img>` displays the user profile picture.
+        -   `github-profile-badge-logo`: `<img>` displays the GitHub logo.
+    -   `github-profile-badge-name-wrapper`: `<div>` wraps and shows/hides the username.
+        -   `github-profile-badge-name`: `<p>` displays the username.
+
+## License
+
+The library is released under the MIT license. For more information see [`LICENSE`](/LICENSE).
