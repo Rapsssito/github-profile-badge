@@ -1,12 +1,16 @@
 (function (d) {
     const BASE_SIZE = 50;
+    const LOGO_SIZE = 20;
+    const LOGO_OFFSET = 5;
 
     const style = d.createElement('style');
     style.innerHTML = `
         .github-profile-badge-wrapper {
             text-decoration: none;
             display: flex;
-            align-items: center;
+            -webkit-tap-highlight-color: transparent;
+            padding-bottom: ${LOGO_OFFSET}px;
+            padding-right: ${LOGO_OFFSET}px;
         }
 
         .github-profile-badge-img-wrapper {
@@ -22,10 +26,10 @@
 
         .github-profile-badge-logo {
             position: absolute;
-            bottom: -5px;
-            left: 35px;
-            width: 20px;
-            height: 20px;
+            bottom: -${LOGO_OFFSET}px;
+            right: -${LOGO_OFFSET}px;
+            width: ${LOGO_SIZE}px;
+            height: ${LOGO_SIZE}px;
         }
 
         .github-profile-badge-name-wrapper {
@@ -119,7 +123,7 @@
         const nameText = getNameText(username);
         nameDiv.appendChild(nameText);
         wrapper.appendChild(nameDiv);
-        wrapper.onmouseover = (ev) => {
+        wrapper.onpointerenter = (ev) => {
             const nameTextStyle = window.getComputedStyle(nameText);
             nameDiv.style.width =
                 nameText.offsetWidth +
@@ -127,7 +131,7 @@
                 parseFloat(nameTextStyle.marginRight) +
                 'px';
         };
-        wrapper.onmouseleave = (ev) => {
+        wrapper.onpointerleave = (ev) => {
             nameDiv.style.width = 0;
         };
 
