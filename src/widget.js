@@ -38,12 +38,13 @@
             overflow: hidden;
             background: transparent;
             align-self: stretch;
-            padding-left: ${BASE_SIZE/2}px;
-            margin-left: -${BASE_SIZE/2}px;
-            border-top-right-radius: ${BASE_SIZE/2}px;
-            border-bottom-right-radius: ${BASE_SIZE/2}px;
+            padding-left: ${BASE_SIZE / 2}px;
+            margin-left: -${BASE_SIZE / 2}px;
+            border-top-right-radius: ${BASE_SIZE / 2}px;
+            border-bottom-right-radius: ${BASE_SIZE / 2}px;
             width: 0;
-            transition: width 0.5s ease;
+            max-width: 0;
+            transition: all 0.5s ease;
         }
 
         .github-profile-badge-name {
@@ -125,14 +126,16 @@
         wrapper.appendChild(nameDiv);
         wrapper.onpointerenter = (ev) => {
             const nameTextStyle = window.getComputedStyle(nameText);
-            nameDiv.style.width =
-                nameText.offsetWidth +
+            const newWidth = nameText.offsetWidth +
                 parseFloat(nameTextStyle.marginLeft) +
                 parseFloat(nameTextStyle.marginRight) +
                 'px';
+            nameDiv.style.width = newWidth;
+            nameDiv.style.maxWidth = newWidth;
         };
         wrapper.onpointerleave = (ev) => {
             nameDiv.style.width = 0;
+            nameDiv.style.maxWidth = 0;
         };
 
         widget.appendChild(wrapper);
