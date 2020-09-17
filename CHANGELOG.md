@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Rapsssito/github-profile-badge/compare/v1.1.0...v1.1.1) (2020-09-17)
+
+
+### Bug Fixes
+
+* Add iOS compatibility ([424ca02](https://github.com/Rapsssito/github-profile-badge/commit/424ca02a3d5554082c6159d3af9121f4f385c2d1))
+
 # [1.1.0](https://github.com/Rapsssito/github-profile-badge/compare/v1.0.0...v1.1.0) (2020-07-31)
 
 
