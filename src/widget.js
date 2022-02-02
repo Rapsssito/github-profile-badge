@@ -33,6 +33,7 @@
         }
 
         .github-profile-badge-name-wrapper {
+            box-sizing: content-box;
             display: flex;
             align-items: center;
             overflow: hidden;
