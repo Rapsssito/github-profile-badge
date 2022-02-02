@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Rapsssito/github-profile-badge/compare/v1.1.1...v1.1.2) (2022-02-02)
+
+
+### Bug Fixes
+
+* Set explicit box-sizing ([05191d4](https://github.com/Rapsssito/github-profile-badge/commit/05191d42c97b94d3b14f0f46625a89e2d9f16941)), closes [#2](https://github.com/Rapsssito/github-profile-badge/issues/2)
+
 ## [1.1.1](https://github.com/Rapsssito/github-profile-badge/compare/v1.1.0...v1.1.1) (2020-09-17)
 
 
